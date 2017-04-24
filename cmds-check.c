@@ -7668,6 +7668,7 @@ static int run_next_block(struct btrfs_root *root,
 	if (!extent_buffer_uptodate(buf)) {
 		record_bad_block_io(root->fs_info,
 				    extent_cache, bytenr, size);
+		ret = PTR_ERR(buf);
 		goto out;
 	}
 
