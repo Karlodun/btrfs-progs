@@ -141,7 +141,7 @@ for --sort you can combine some items together by \',', just like
 
 *set-default* <id> <path>::
 Set the subvolume of the filesystem <path> which is mounted as
-default.
+default. Requires remount of the volume for changes to become visible.
 +
 The subvolume is identified by <id>, which is returned by the *subvolume list*
 command.
